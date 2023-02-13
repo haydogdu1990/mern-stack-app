@@ -37,7 +37,7 @@ app.listen(3000, () => {
 run();
 
 async function run() {
-  const user = await User.create({ name: "j", age: 23 });
+  const user = await User.create({ name: "kkkk", age: 45 });
   //   const user = new User({ name: "K", age: 26 });
   //   await user.save();
   console.log(user);
