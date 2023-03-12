@@ -14,7 +14,7 @@ const Home = () => {
       const response = await fetch("/users", {
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
+          'Accept': "application/json",
         },
       });
       const json = await response.json();
