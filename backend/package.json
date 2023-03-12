@@ -4,6 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "build": "npm install",
     "devStart": "nodemon server.js",
     "start": "node server.js"
   },
