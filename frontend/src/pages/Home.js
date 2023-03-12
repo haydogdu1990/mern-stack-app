@@ -9,17 +9,16 @@ import UserForm from "../components/UserForm";
 const Home = () => {
   const { users, dispatch } = useUsersContext();
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("/users", {
-        headers: {
-          "Content-Type": "application/json",
-          'Accept': "application/json",
-        },
-      });
-      const json = await response.json();
+      let json = {};
+      const response = await axios
+        .get("/users")
+        .then((responce) => (json = responce.data));
 
-      if (response.ok) {
+      console.log(response.ok);
+
+      if (true) {
         dispatch({ type: "SET_USERS", payload: json });
       }
     };
