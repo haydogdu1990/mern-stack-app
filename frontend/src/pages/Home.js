@@ -29,9 +29,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="users">
-        {users &&
-          users.map((user) => <div key={user._id}>{user.username}</div>)}
-      </div>
+        {users[0].username}
 
       <UserForm />
     </div>
