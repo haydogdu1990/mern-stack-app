@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import axios from 'axios';
 
-
+import { useUsersContext } from "../hooks/useUsersContext";
 
 //components
-import UserDetails from "../components/UserDetails";
+
 import UserForm from "../components/UserForm";
 
 const Home = () => {
