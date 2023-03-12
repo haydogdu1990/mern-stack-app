@@ -30,7 +30,7 @@ const Home = () => {
     <div className="home">
       <div className="users">
         {users[0].username}
-
+       </div>
       <UserForm />
     </div>
   );
