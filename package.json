@@ -1,19 +1,13 @@
 {
-  "name": "nextjs-nodejs-mongodb",
+  "name": "mern-stack-app",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
   "scripts": {
-    "devStart": "nodemon script.js"
+    "build": "if-env TYPE=server && (cd backend && npm install) || (cd client && npm install)",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^6.9.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
+    "if-env": "^1.0.4"
   }
 }
