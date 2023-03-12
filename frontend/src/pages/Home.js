@@ -17,7 +17,7 @@ const Home = () => {
         .get("/users")
         .then((responce) => (json = responce.data));
 
-      console.log(response.ok);
+      console.log(json);
 
       if (true) {
         dispatch({ type: "SET_USERS", payload: json });
