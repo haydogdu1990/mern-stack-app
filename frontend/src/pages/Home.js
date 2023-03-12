@@ -1,16 +1,16 @@
 import { useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 import { useUsersContext } from "../hooks/useUsersContext";
 
 //components
-
+import UserDetails from "../components/UserDetails";
 import UserForm from "../components/UserForm";
 
 const Home = () => {
   const { users, dispatch } = useUsersContext();
 
-   useEffect(() => {
+  useEffect(() => {
     const fetchUsers = async () => {
       let json = {};
       const response = await axios
@@ -26,11 +26,16 @@ const Home = () => {
     fetchUsers();
   }, [dispatch]);
 
+  console.log("users: " + JSON.stringify(users));
+  console.log("users1: " + JSON.stringify(users[0]));
+
   return (
     <div className="home">
       <div className="users">
-        {users[0].username}
-       </div>
+        {users &&
+          users.map((user) => <UserDetails key={user._id} user={user} />)}
+      </div>
+
       <UserForm />
     </div>
   );
