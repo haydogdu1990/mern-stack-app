@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import axios from 'axios';
 
-import { useUsersContext } from "../hooks/useUsersContext";
+
 
 //components
 import UserDetails from "../components/UserDetails";
