@@ -11,7 +11,12 @@ const Home = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("/users");
+      const response = await fetch("/users", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
       const json = await response.json();
 
       if (response.ok) {
