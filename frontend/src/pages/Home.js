@@ -9,7 +9,7 @@ import UserForm from "../components/UserForm";
 const Home = () => {
   const { users, dispatch } = useUsersContext();
 
- useEffect(() => {
+   useEffect(() => {
     const fetchUsers = async () => {
       let json = {};
       const response = await axios
